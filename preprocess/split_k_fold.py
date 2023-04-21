@@ -1,8 +1,8 @@
 import json
 import os
 
-data_root = "/mnt/dolphinfs/hdd_pool/docker/user/hadoop-vacv/qianyinlong/challenge/AI-City-2023/Naturalistic-Driving-Action-Recognition/Data/Ori-data/A1"
-with open(os.path.join(data_root, "data_split_0209.json"), "r") as fp:
+data_root = "data/A1"
+with open(os.path.join(data_root, "data_split_0.json"), "r") as fp:
     data = json.load(fp)
 
 val_list = data["val"]
