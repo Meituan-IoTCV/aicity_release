@@ -67,21 +67,21 @@ We release our trained model weights organized with "camera view" and "fold k". 
 
 | Camera View       | Fold | Model Results |
 | ------------------ |---------------- | -------------- |
-| Dashboard   |     0         |       [dash_0.pth](https://drive.google.com/mymodel.pth)    |
-| Dashboard   |     1         |       [dash_1.pth](https://drive.google.com/mymodel.pth)    |
-| Dashboard   |     2         |       [dash_2.pth](https://drive.google.com/mymodel.pth)    |
-| Dashboard   |     3         |       [dash_3.pth](https://drive.google.com/mymodel.pth)    |
-| Dashboard   |     4         |       [dash_4.pth](https://drive.google.com/mymodel.pth)    |
-| Rightside   |     0         |       [rightside_0.pth](https://drive.google.com/mymodel.pth)    |
-| Rightside   |     1         |       [rightside_1.pth](https://drive.google.com/mymodel.pth)    |
-| Rightside   |     2         |       [rightside_2.pth](https://drive.google.com/mymodel.pth)    |
-| Rightside   |     3         |       [rightside_3.pth](https://drive.google.com/mymodel.pth)    |
-| Rightside   |     4         |       [rightside_4.pth](https://drive.google.com/mymodel.pth)    |
-| Rear View   |     0         |       [rearview_0.pth](https://drive.google.com/mymodel.pth)    |
-| Rear View   |     1         |       [rearview_1.pth](https://drive.google.com/mymodel.pth)    |
-| Rear View   |     2         |       [rearview_2.pth](https://drive.google.com/mymodel.pth)    |
-| Rear View   |     3         |       [rearview_3.pth](https://drive.google.com/mymodel.pth)    |
-| Rear View   |     4         |       [rearview_4.pth](https://drive.google.com/mymodel.pth)    |
+| Dashboard   |     0         |       [dash_0.pth](https://huggingface.co/idealweiwei/aicity_release/tree/main)    |
+| Dashboard   |     1         |       [dash_1.pth](https://huggingface.co/idealweiwei/aicity_release/tree/main)    |
+| Dashboard   |     2         |       [dash_2.pth](https://huggingface.co/idealweiwei/aicity_release/tree/main)    |
+| Dashboard   |     3         |       [dash_3.pth](https://huggingface.co/idealweiwei/aicity_release/tree/main)    |
+| Dashboard   |     4         |       [dash_4.pth](https://huggingface.co/idealweiwei/aicity_release/tree/main)    |
+| Rightside   |     0         |       [rightside_0.pth](https://huggingface.co/idealweiwei/aicity_release/tree/main)    |
+| Rightside   |     1         |       [rightside_1.pth](https://huggingface.co/idealweiwei/aicity_release/tree/main)    |
+| Rightside   |     2         |       [rightside_2.pth](https://huggingface.co/idealweiwei/aicity_release/tree/main)    |
+| Rightside   |     3         |       [rightside_3.pth](https://huggingface.co/idealweiwei/aicity_release/tree/main)    |
+| Rightside   |     4         |       [rightside_4.pth](https://huggingface.co/idealweiwei/aicity_release/tree/main)    |
+| Rear View   |     0         |       [rearview_0.pth](https://huggingface.co/idealweiwei/aicity_release/tree/main)    |
+| Rear View   |     1         |       [rearview_1.pth](https://huggingface.co/idealweiwei/aicity_release/tree/main)    |
+| Rear View   |     2         |       [rearview_2.pth](https://huggingface.co/idealweiwei/aicity_release/tree/main)    |
+| Rear View   |     3         |       [rearview_3.pth](https://huggingface.co/idealweiwei/aicity_release/tree/main)    |
+| Rear View   |     4         |       [rearview_4.pth](https://huggingface.co/idealweiwei/aicity_release/tree/main)    |
 
 
 ## Contact

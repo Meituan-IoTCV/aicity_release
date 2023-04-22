@@ -1,10 +1,10 @@
 
 # Set the path to save checkpoints
-OUTPUT_DIR='../../model_zoo/k400_videomae_pretrain_large_patch16_224_frame_16x4_tube_mask_ratio_0.9_e1600/eval_lr_2e-3_repeated_aug_epoch_35+0304_lion_dash_betas_8x8'
+OUTPUT_DIR='pickles/A2'
 # path to Kinetics set (train.csv/val.csv/test.csv)
-DATA_PATH='/home/hadoop-vacv/hadoop-vacv/qianyinlong/challenge/AI-City-2023/Naturalistic-Driving-Action-Recognition/Data/Ori-data/A1_clip/videomae/'
+DATA_PATH='data/A2/'
 # # new gt, cropped, fold1
-MODEL_PATH='./checkpoints/recog_dash_0//checkpoint-best.pth'
+MODEL_PATH='./checkpoints/recog_dash_0/checkpoint-best.pth'
 # batch_size can be adjusted according to number of GPUs
 # this script is for 64 GPUs (8 nodes x 8 GPUs) 
 CUDA_VISIBLE_DEVICES=0 python evaluate_loc.py \
@@ -33,7 +33,7 @@ CUDA_VISIBLE_DEVICES=0 python evaluate_loc.py \
     --crop \
 
 
-MODEL_PATH='./checkpoints/recog_right_0//checkpoint-best.pth'
+MODEL_PATH='./checkpoints/recog_right_0/checkpoint-best.pth'
 # batch_size can be adjusted according to number of GPUs
 # this script is for 64 GPUs (8 nodes x 8 GPUs) 
 CUDA_VISIBLE_DEVICES=0 python evaluate_loc.py \
@@ -62,7 +62,7 @@ CUDA_VISIBLE_DEVICES=0 python evaluate_loc.py \
     --crop \
 
 
-MODEL_PATH='./checkpoints/recog_rear_0//checkpoint-best.pth'
+MODEL_PATH='./checkpoints/recog_rear_0/checkpoint-best.pth'
 # batch_size can be adjusted according to number of GPUs
 # this script is for 64 GPUs (8 nodes x 8 GPUs) 
 CUDA_VISIBLE_DEVICES=0 python evaluate_loc.py \

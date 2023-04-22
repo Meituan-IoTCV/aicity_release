@@ -309,6 +309,8 @@ def get_args():
                         help='frames between each clip')
     parser.add_argument('--fold', default=0, type=int,
                         help='frames between each clip')
+    parser.add_argument('--csv_file', default="video_ids.csv", type=str,
+                        help='MP4 video csv files')
     known_args, _ = parser.parse_known_args()
 
     if known_args.enable_deepspeed:
@@ -465,40 +467,11 @@ def main(args, ds_init):
             resume='')
         print("Using EMA with decay = %.8f" % args.model_ema_decay)
         utils._load_checkpoint_for_ema(model_ema, torch.load(args.finetune)["model_ema"])
-    data_root= "/mnt/dolphinfs/hdd_pool/docker/user/hadoop-vacv/qianyinlong/challenge/AI-City-2023/Naturalistic-Driving-Action-Recognition/Data/Ori-data/A2_512x512/"
-    video_csv = os.path.join(data_root, "video_ids.csv")
-    # data = pd.read_csv(video_csv)
-    # dash_video_list = []
-    # rear_video_list = []
-    # right_video_list = []
-    # for idx, row_data in data.iterrows():
-    #     user_id = re.search("user_id_\d{5}", row_data[1])[0]
-    #     dash_video_list.append(os.path.join(video_root, user_id, row_data[1]))
-    #     rear_video_list.append(os.path.join(video_root, user_id, row_data[2]))
-    #     right_video_list.append(os.path.join(video_root, user_id, row_data[3]))
+    video_csv = os.path.join(args.data_path, args.csv_file)
 
-    # start = time.time()
-
-    # vmae_16x4 = {}
-    # view = "right"
-    # for video_path in right_video_list:
-    #     start = time.time()
-    #     video_name = os.path.basename(video_path).rstrip(".MP4")
-    #     start = time.time()
-    #     if view in video_name.lower():
-    #         user_id = re.search("user_id_\d{5}", video_name)[0]
-    #         probs = inference_video(model, video_path, args.num_frames, args.sampling_rate)
-    #         print("Seq len:", probs.shape)
-    #         vmae_16x4[video_name] = probs
-    #         end = time.time()
-    #         print("Finished", video_name)
-    #         print("Costing:", end - start)
-
-    # with open("{}_vmae_16x4_base.pkl".format(view), "wb") as f:
-    #     pickle.dump(vmae_16x4, f)
 
     start = time.time()
-    dataset = VideoInferDataset(data_root, video_csv, frame_sample_rate=args.sampling_rate, clip_stride=args.clip_stride, crop=args.crop, view=args.view)
+    dataset = VideoInferDataset(args.data_path, video_csv, frame_sample_rate=args.sampling_rate, clip_stride=args.clip_stride, crop=args.crop, view=args.view)
     test_loader = torch.utils.data.DataLoader(dataset, batch_size=8, num_workers=8)
 
 
@@ -527,7 +500,7 @@ def main(args, ds_init):
     for file_name in unique_names:
         vmae_16x4[file_name] = np.asarray(results.get_group(str(file_name))["prob"])
 
-    with open("pickles/A2/A2_{}_vmae_16x4_crop_fold_{}_clean_ema_last.pkl".format(args.view, args.fold), "wb") as f:
+    with open(os.path.join(args.output_dir, "A1_{}_vmae_16x4_crop_fold_{}.pkl".format(args.view, args.fold)), "wb") as f:
         pickle.dump(vmae_16x4, f)
 
     end = time.time()
