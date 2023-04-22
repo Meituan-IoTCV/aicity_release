@@ -1,6 +1,6 @@
 # Implementation of Multi view Action Recognition for Distracted Driver Behavior Localization
 
-This repository is the official implementation of [Multi view Action Recognition for Distracted Driver Behavior Localization](pdf/19.pdf).  This paper presents our approach for Track 3 (Natural- istic Driving Action Recognition) of the 2023 AI City Challenge, where the objective is to classify distracting driving activities in each untrimmed naturalistic driving video and localize the accurate temporal boundaries of them. We  rank the 1st on the Test-A2 of the challenge track.
+This repository is the official implementation of [Multi view Action Recognition for Distracted Driver Behavior Localization](paper/19.pdf).  This paper presents our approach for Track 3 (Natural- istic Driving Action Recognition) of the 2023 AI City Challenge, where the objective is to classify distracting driving activities in each untrimmed naturalistic driving video and localize the accurate temporal boundaries of them. We  rank the 1st on the Test-A2 of the challenge track.
 ![pipeline](figs/pipeline.png)
 ## Requirements
 Please follow the installation instructions in [VideoMAE](https://github.com/MCG-NJU/VideoMAE). Also, you can simply run the following command:
