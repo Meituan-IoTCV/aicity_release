@@ -1,9 +1,13 @@
+# Implementation of Multi view Action Recognition for Distracted Driver Behavior Localization
 
-# Solution of 2023 AI City Challenge [Track 3: Naturalistic Driving Action Recognition]
-This repository is the official implementation of [Multi view Action Recognition for Distracted Driver Behavior Localization](pdf/19.pdf). 
+This repository is the official implementation of [Multi view Action Recognition for Distracted Driver Behavior Localization](pdf/19.pdf).  This paper presents our approach for Track 3 (Natural- istic Driving Action Recognition) of the 2023 AI City Challenge, where the objective is to classify distracting driving activities in each untrimmed naturalistic driving video and localize the accurate temporal boundaries of them. We  rank the 1st on the Test-A2 of the challenge track.
 ![pipeline](figs/pipeline.png)
 ## Requirements
-Please follow the installation instructions in [VideoMAE](https://github.com/MCG-NJU/VideoMAE).
+Please follow the installation instructions in [VideoMAE](https://github.com/MCG-NJU/VideoMAE). Also, you can simply run the following command:
+```
+conda env create -f environment.yml
+conda activate pt1.9.0cu11.1_official
+```
 
 ##  Data Preprocessing
 **1. Data download**
@@ -28,7 +32,7 @@ python preprocess/split_k_fold.py
 
 
 ## Training Recognition Model
-Our model is initialized with pretrained VideoMAE with  Kinetic-710, you can get the pretrained weights from [VideoMAE-Kinetic-710/ViT-L](https://123.com) 
+Our model is initialized with pretrained VideoMAE with  Kinetic-710, you can get the pretrained weights from [VideoMAE-Kinetic-710/ViT-L](https://drive.google.com/file/d/1jX1CiqxSkCfc94y8FRW1YGHy-GNvHCuD/view?usp=sharing) 
 Modified the "MODEL_PATH" in script "scrpts/cls/train_cls.sh" to your own path.
 To train the model (s) in the paper, run this command:
 
@@ -43,8 +47,7 @@ bash sripts/cls/train_cls.sh
 To evaluate my model on ImageNet, run:
 
 ```inference 
-bash scripts/cls/inference.sh
-
+bash scripts/cls/inference.sh 
 ```
 
 >📋  Describe how to evaluate the trained models on benchmarks reported in the paper, give commands that produce the results (section below).
@@ -57,6 +60,8 @@ python run_submission.py
 ```
 
 
+## Customed Data 
+For 
 ## Results
 
 Our model achieves the following performance on :
@@ -70,7 +75,7 @@ Our model achieves the following performance on :
 >📋  Include a table of results from your paper, and link back to the leaderboard for clarity and context. If your main result is a figure, include that figure and link to the command or notebook to reproduce it. 
 
 ## Model Zoo
-We provided our train model weights organized with "camera view" and "fold".
+We release our trained model weights organized with "camera view" and "fold k". You can download to reproduce the results we report in the paper.
 
 | Camera View       | Fold | Model Results |
 | ------------------ |---------------- | -------------- |
