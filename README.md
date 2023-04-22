@@ -47,10 +47,9 @@ bash sripts/cls/train_cls.sh
 To evaluate my model on ImageNet, run:
 
 ```inference 
-bash scripts/cls/inference.sh 
+bash scripts/cls/inference_cls.sh 
 ```
 
->📋  Describe how to evaluate the trained models on benchmarks reported in the paper, give commands that produce the results (section below).
 
 ## Postprocessing 
 
@@ -61,18 +60,7 @@ python run_submission.py
 
 
 ## Customed Data 
-For 
-## Results
-
-Our model achieves the following performance on :
-
-### [Image Classification on ImageNet](https://paperswithcode.com/sota/image-classification-on-imagenet)
-
-| Model name         | Top 1 Accuracy  | Top 5 Accuracy |
-| ------------------ |---------------- | -------------- |
-| My awesome model   |     85%         |      95%       |
-
->📋  Include a table of results from your paper, and link back to the leaderboard for clarity and context. If your main result is a figure, include that figure and link to the command or notebook to reproduce it. 
+ 
 
 ## Model Zoo
 We release our trained model weights organized with "camera view" and "fold k". You can download to reproduce the results we report in the paper.
@@ -98,5 +86,5 @@ We release our trained model weights organized with "camera view" and "fold k". 
 
 ## Contact
 For further discussion, you are welcomed to send an e-mail to the following email address. 
-zhouwei82@meituan.com
+zhouwei85@meituan.com
 qianyinlong@meituan.com
