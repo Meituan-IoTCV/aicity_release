@@ -5,7 +5,7 @@ This repository is the official implementation of [Multi view Action Recognition
 ## Requirements
 Please follow the installation instructions in [VideoMAE](https://github.com/MCG-NJU/VideoMAE). Also, you can simply run the following command:
 ```
-conda env create -f environment.yml
+conda env create -f environment.yaml
 conda activate pt1.9.0cu11.1_official
 ```
 

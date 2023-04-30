@@ -36,7 +36,7 @@ dependencies:
   - libxcb=1.13
   - libxml2=2.10.3
   - libzlib=1.2.13
-  - llvm-openmp=15.0.7   
+  - llvm-openmp=15.0.7
   - lz4-c=1.9.2
   - mkl=2021.4.0
   - mkl-service=2.4.0
