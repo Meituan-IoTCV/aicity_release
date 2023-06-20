@@ -42,7 +42,7 @@ bash sripts/cls/train_cls.sh
 
 ## Inference A2 video
 
-To evaluate my model on test-A2, first download the pretrained weights in "Model Zoo" section, and put them into the dir "aicity_released/checkpoints" . You will get a directory tree like this.
+To evaluate my model on test-A2, first download the pretrained weights in "[Model Zoo](#model-zoo)" section, and put them into the dir "aicity_released/checkpoints" . You will get a directory tree like this.
 ```
 ├── aicity_release
 │   ├── checkpoints
