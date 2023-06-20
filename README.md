@@ -50,14 +50,14 @@ To evaluate my model on test-A2, first download the pretrained weights in "[Mode
 │   │   ├── dash_1.pth
 │   │   └── ...
 │   │   ├── dash_4.pth
-│   │   ├── rear_0.pth
-│   │   ├── rear_1.pth
+│   │   ├── rearview_0.pth
+│   │   ├── rearview_1.pth
 │   │   └── ...
-│   │   ├── rear_4.pth
-│   │   ├── right_0.pth
-│   │   ├── right_1.pth
+│   │   ├── rearview_4.pth
+│   │   ├── rightside_0.pth
+│   │   ├── rightside_1.pth
 │   │   └── ...
-│   │   ├── right_4.pth
+│   │   ├── rightside_4.pth
 │   ├── data
 │   ├── figs
 │   ├── paper
