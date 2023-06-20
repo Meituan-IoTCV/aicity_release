@@ -77,34 +77,34 @@ After inferencing the "test" set videos, we get the classification probablity se
 ```
 python run_submission.py
 ```
+and a localization file will be generated as "aicity_released/A2_submission.txt"
 
-
-## Customed Data 
- 
+## Customed Data (test-B)
+For custom data, please organized them like the official released dataset. Prepare a ".csv" file to store the information of "test-B"
 
 ## Model Zoo
 We release our trained model weights organized with "camera view" and "fold k". You can download to reproduce the results we report in the paper.
 
 | Camera View       | Fold | Model Results |
 | ------------------ |---------------- | -------------- |
-| Dashboard   |     0         |       [dash_0.pth](https://huggingface.co/idealweiwei/aicity_release/tree/main)    |
-| Dashboard   |     1         |       [dash_1.pth](https://huggingface.co/idealweiwei/aicity_release/tree/main)    |
-| Dashboard   |     2         |       [dash_2.pth](https://huggingface.co/idealweiwei/aicity_release/tree/main)    |
-| Dashboard   |     3         |       [dash_3.pth](https://huggingface.co/idealweiwei/aicity_release/tree/main)    |
-| Dashboard   |     4         |       [dash_4.pth](https://huggingface.co/idealweiwei/aicity_release/tree/main)    |
-| Rightside   |     0         |       [rightside_0.pth](https://huggingface.co/idealweiwei/aicity_release/tree/main)    |
-| Rightside   |     1         |       [rightside_1.pth](https://huggingface.co/idealweiwei/aicity_release/tree/main)    |
-| Rightside   |     2         |       [rightside_2.pth](https://huggingface.co/idealweiwei/aicity_release/tree/main)    |
-| Rightside   |     3         |       [rightside_3.pth](https://huggingface.co/idealweiwei/aicity_release/tree/main)    |
-| Rightside   |     4         |       [rightside_4.pth](https://huggingface.co/idealweiwei/aicity_release/tree/main)    |
-| Rear View   |     0         |       [rearview_0.pth](https://huggingface.co/idealweiwei/aicity_release/tree/main)    |
-| Rear View   |     1         |       [rearview_1.pth](https://huggingface.co/idealweiwei/aicity_release/tree/main)    |
-| Rear View   |     2         |       [rearview_2.pth](https://huggingface.co/idealweiwei/aicity_release/tree/main)    |
-| Rear View   |     3         |       [rearview_3.pth](https://huggingface.co/idealweiwei/aicity_release/tree/main)    |
-| Rear View   |     4         |       [rearview_4.pth](https://huggingface.co/idealweiwei/aicity_release/tree/main)    |
+| Dashboard   |     0         |       [dash_0.pth](https://huggingface.co/idealweiwei/aicity_release/resolve/main/dash_0.pth)    |
+| Dashboard   |     1         |       [dash_1.pth](https://huggingface.co/idealweiwei/aicity_release/resolve/main/dash_1.pth)    |
+| Dashboard   |     2         |       [dash_2.pth](https://huggingface.co/idealweiwei/aicity_release/resolve/main/dash_2.pth)    |
+| Dashboard   |     3         |       [dash_3.pth](https://huggingface.co/idealweiwei/aicity_release/resolve/main/dash_3.pth)    |
+| Dashboard   |     4         |       [dash_4.pth](https://huggingface.co/idealweiwei/aicity_release/resolve/main/dash_4.pth)    |
+| Rightside   |     0         |       [rightside_0.pth](https://huggingface.co/idealweiwei/aicity_release/resolve/main/rightside_0.pth)    |
+| Rightside   |     1         |       [rightside_1.pth](https://huggingface.co/idealweiwei/aicity_release/resolve/main/rightside_1.pth)    |
+| Rightside   |     2         |       [rightside_2.pth](https://huggingface.co/idealweiwei/aicity_release/resolve/main/rightside_2.pth)    |
+| Rightside   |     3         |       [rightside_3.pth](https://huggingface.co/idealweiwei/aicity_release/resolve/main/rightside_3.pth)    |
+| Rightside   |     4         |       [rightside_4.pth](https://huggingface.co/idealweiwei/aicity_release/resolve/main/rightside_4.pth)    |
+| Rear View   |     0         |       [rearview_0.pth](https://huggingface.co/idealweiwei/aicity_release/resolve/main/rearview_0.pth)    |
+| Rear View   |     1         |       [rearview_1.pth](https://huggingface.co/idealweiwei/aicity_release/resolve/main/rearview_1.pth)    |
+| Rear View   |     2         |       [rearview_2.pth](https://huggingface.co/idealweiwei/aicity_release/resolve/main/rearview_2.pth)    |
+| Rear View   |     3         |       [rearview_3.pth](https://huggingface.co/idealweiwei/aicity_release/resolve/main/rearview_3.pth)    |
+| Rear View   |     4         |       [rearview_4.pth](https://huggingface.co/idealweiwei/aicity_release/resolve/main/rearview_4.pth)    |
 
 
 ## Contact
 For further discussion, you are welcomed to send an e-mail to the following email address. 
-zhouwei85@meituan.com
+zhouwei85@meituan.com ( or weizhou@hust.edu.cn)
 qianyinlong@meituan.com

@@ -500,7 +500,7 @@ def main(args, ds_init):
     for file_name in unique_names:
         vmae_16x4[file_name] = np.asarray(results.get_group(str(file_name))["prob"])
 
-    with open(os.path.join(args.output_dir, "A2_{}_vmae_16x4_crop_fold_{}.pkl".format(args.view, args.fold)), "wb") as f:
+    with open(os.path.join(args.output_dir, "A1_{}_vmae_16x4_crop_fold_{}.pkl".format(args.view, args.fold)), "wb") as f:
         pickle.dump(vmae_16x4, f)
 
     end = time.time()
