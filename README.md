@@ -40,8 +40,6 @@ To train the model (s) in the paper, run this command:
 bash sripts/cls/train_cls.sh
 ```
 
->📋  Describe how to train the models, with example commands on how to train the models in your paper, including the full training procedure and appropriate hyperparameters.
-
 ## Inference A2 video
 
 To evaluate my model on test-A2, first download the pretrained weights in "Model Zoo" section, and put them into the dir "aicity_released/checkpoints" . You will get a directory tree like this.
@@ -80,8 +78,22 @@ python run_submission.py
 and a localization file will be generated as "aicity_released/A2_submission.txt"
 
 ## Customed Data (test-B)
-For custom data, please organized them like the official released dataset. Prepare a ".csv" file to store the information of "test-B"
+For split "B", please organized them like the official released dataset like "A2". The format of the B dataset should be oragnized as follows:   
 
+>   * B
+>     * user_id_*
+>       * CAMERAVIEW_user_id_*.MP4
+>       * CAMERAVIEW_user_id_*.MP4
+>       * CAMERAVIEW_user_id_*.MP4
+>       * ...
+>     * video_ids.csv   
+
+
+Then run the following scripts, a localization txt file will be generated as "aicity_released/B_submission.txt".
+```
+bash localize_B.sh
+python run_submission_B.py
+```
 ## Model Zoo
 We release our trained model weights organized with "camera view" and "fold k". You can download to reproduce the results we report in the paper.
 

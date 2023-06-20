@@ -1,7 +1,7 @@
 
-# Set the path to save checkpoints
-OUTPUT_DIR='pickles/A2'
-DATA_PATH='data/A2/'
+# Put "B" split into data, and generate a "video_ids.csv" file like "A2"
+OUTPUT_DIR='pickles/B'
+DATA_PATH='data/B/'
 
 MODEL_PATH='./checkpoints/dash_0.pth'
 # batch_size can be adjusted according to number of GPUs
