@@ -44,8 +44,28 @@ bash sripts/cls/train_cls.sh
 
 ## Inference A2 video
 
-To evaluate my model on ImageNet, run:
-
+To evaluate my model on test-A2, first download the pretrained weights in "Model Zoo" section, and put them into the dir "aicity_released/checkpoints" . You will get a directory tree like this.
+```
+├── aicity_release
+│   ├── checkpoints
+│   │   ├── dash_0.pth
+│   │   ├── dash_1.pth
+│   │   └── ...
+│   │   ├── dash_4.pth
+│   │   ├── rear_0.pth
+│   │   ├── rear_1.pth
+│   │   └── ...
+│   │   ├── rear_4.pth
+│   │   ├── right_0.pth
+│   │   ├── right_1.pth
+│   │   └── ...
+│   │   ├── right_4.pth
+│   ├── data
+│   ├── figs
+│   ├── paper
+│   ├── pickles
+```
+ then run the following command:
 ```inference 
 bash scripts/cls/inference_cls.sh 
 ```
