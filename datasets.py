@@ -3,7 +3,6 @@ from torchvision import transforms
 from transforms import *
 from masking_generator import TubeMaskingGenerator
 from kinetics import VideoClsDataset, VideoMAE
-from ssv2 import SSVideoClsDataset
 
 
 class DataAugmentationForVideoMAE(object):
@@ -86,35 +85,6 @@ def build_dataset(is_train, test_mode, args):
             args=args)
         nb_classes = 16
     
-    elif args.data_set == 'SSV2':
-        mode = None
-        anno_path = None
-        if is_train is True:
-            mode = 'train'
-            anno_path = os.path.join(args.data_path, 'train.csv')
-        elif test_mode is True:
-            mode = 'test'
-            anno_path = os.path.join(args.data_path, 'test.csv') 
-        else:  
-            mode = 'validation'
-            anno_path = os.path.join(args.data_path, 'val.csv') 
-
-        dataset = SSVideoClsDataset(
-            anno_path=anno_path,
-            data_path='/',
-            mode=mode,
-            clip_len=1,
-            num_segment=args.num_frames,
-            test_num_segment=args.test_num_segment,
-            test_num_crop=args.test_num_crop,
-            num_crop=1 if not test_mode else 3,
-            keep_aspect_ratio=True,
-            crop_size=args.input_size,
-            short_side_size=args.short_side_size,
-            new_height=256,
-            new_width=320,
-            args=args)
-        nb_classes = 174
 
     elif args.data_set == 'UCF101':
         mode = None
